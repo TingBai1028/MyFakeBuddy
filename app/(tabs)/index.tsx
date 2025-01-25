@@ -1,17 +1,19 @@
 import { Text, View, StyleSheet } from "react-native";
 import { Button } from "react-native";
 import React from 'react';
+import { useRouter } from 'expo-router';
 
 export default function Index() {
+  const router = useRouter();
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to My Fake Buddy</Text>
       <Text style={styles.subtitle}>Press the button below to start a call!</Text>   
       <Button
-          title="Start Call"
-          onPress={() => alert('complete functionality')}
-        />
+        title="Start Call"
+        onPress={() => router.push('/CallingScreen')}
+      />
     </View>
   );
 }
