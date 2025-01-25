@@ -1,50 +1,80 @@
-# Welcome to your Expo app 👋
+# MyFakeBuddy
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+MyFakeBuddy is a mobile application designed to help users practice English speaking naturally and confidently. The app simulates a fake phone call with ChatGPT, enabling users to engage in random conversations on daily-life topics. It provides an excellent platform for language learners to practice speaking in public without feeling awkward.
 
-## Get started
+---
 
-1. Install dependencies
+## Features
 
+- **Voice-to-Voice Communication**: Engage in real-time, simulated phone calls with ChatGPT.
+- **Random Topics**: Practice conversations on a variety of daily-life topics.
+- **Cross-Platform Support**: Built with React Native for both Android and iOS compatibility.
+- **User-Friendly Interface**: Simple and intuitive design for seamless interaction.
+
+---
+
+## Tech Stack
+
+- **Frontend**: [React Native](https://reactnative.dev/)
+- **Backend**: OpenAI ChatGPT API for generating conversation responses.
+- **Voice Features**:
+  - [react-native-tts](https://github.com/ak1394/react-native-tts) for text-to-speech.
+  - [react-native-voice](https://github.com/react-native-voice/voice) for speech-to-text.
+- **Navigation**: [React Navigation](https://reactnavigation.org/).
+
+---
+
+## Getting Started
+
+Follow these steps to set up and run the project locally:
+
+### Prerequisites
+
+- **Node.js**: Download and install from [Node.js](https://nodejs.org).
+- **React Native CLI** or **Expo CLI**:
+  ```bash
+  npm install -g expo-cli
+  ```
+- **Android Studio** (for Android development) or **Xcode** (for iOS development).
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/MyFakeBuddy.git
+   cd MyFakeBuddy
+   ```
+
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. Start the development server:
    ```bash
-    npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+4. Launch the app on a device or emulator:
+   - For Android:
+     ```bash
+     npx react-native run-android
+     ```
+   - For iOS:
+     ```bash
+     npx react-native run-ios
+     ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+## Contact
 
-When you're ready, run:
+For questions or suggestions, feel free to reach out:
 
-```bash
-npm run reset-project
-```
+- **Email**: yutingbai652@hotmail.com
+- **GitHub**: [TingBai1028](https://github.com/TingBai1028)
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Happy practicing with MyFakeBuddy! 🎉
