@@ -9,7 +9,7 @@ export default function NotFoundScreen() {
                 <Link href="/" style={styles.button}>
                 Go Back to Home Screen!
                 </Link>
-            </View>
+            </View>        
         </>
     );
 }
