@@ -27,6 +27,7 @@ export default function AboutScreen() {
             <Text style={styles.paragraph}>
             Hi, my name is Ting. I am a second-year Computer Science student at UNSW with a WAM of 88 and an AWS Certified Cloud Practitioner certification. I have strong leadership and technical skills, demonstrated through projects like the Toohak Backend JavaScript Server and Sun Ray Speed Way, where my team placed 3rd at UNSW. With a passion for cloud computing, time management, and a proven ability to learn quickly, I’m actively seeking IT-related opportunities to apply my skills and continue growing in the tech industry.
             </Text>
+            <br></br>
             <Link href="https://tingbai1028.github.io/tingbaiwebsite/" style={styles.button}>My website</Link>
         </View>
     )
