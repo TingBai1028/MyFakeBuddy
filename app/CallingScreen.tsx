@@ -7,56 +7,22 @@ import { useState } from 'react';
 const CallScreen = () => {
   const router = useRouter();
 
-  // transcription to store user's voice to text
-  const [transcription, setTranscription] = useState('');
-  
-  // record whether the program is listening / user is speaking
-  const [listening, setListening] = useState(false);
+  const [ready, setReady] = useState(null);
+  const [disabled, setDisabled] = useState(false);
+  const [progressItems, setProgressItems] = useState([]);
 
-  useEffect(() => {
-    Voice.onSpeechResults = ((event) => {
-        setTranscription(event.value[0]);
-    });
-
-    Voice.onSpeechError = (error) => {
-        console.error('Speech error:', error);
-        setListening(false);
-    };
-  
-    return () => {
-        Voice.destroy().then(Voice.removeAllListeners); // Cleanup listeners on unmount
-    };
-  }, []);
-
-  const startListening = async () => {
-    try {
-      setListening(true);
-      await Voice.start('en-US'); // Start listening in English
-    } catch (error) {
-      console.error('Error starting Voice:', error);
-    }
-  };
-
-  const stopListening = async () => {
-    try {
-      setListening(false);
-      await Voice.stop(); // Stop listening
-    } catch (error) {
-      console.error('Error stopping Voice:', error);
-    }
-  };
+  // Inputs and outputs
+  const [input, setInput] = useState('I love walking my dog.');
+  const [output, setOutput] = useState('');
 
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.callingText}>Calling...</Text>
-      <Text style={styles.transcription}>You said: {transcription || '...'}</Text>
-      <View style={styles.buttonContainer}>
-        <Button title={listening ? 'Stop Listening' : 'Start Listening'} onPress={listening ? stopListening : startListening} />
-        <br></br>
-        <Button title="End Call" onPress={() => router.back()} />
-      </View>
-    </View>
+      <div className='container'>
+        <div className='textboxContainer'>
+          <textarea value={input} rows={3} onChange={e => setInput(e.target.value)}></textarea>
+          <textarea value={output} rows={3} readOnly></textarea>
+        </div>
+      </div>
   );
 };
 
@@ -80,6 +46,12 @@ const styles = StyleSheet.create({
     buttonContainer: {
       marginTop: 20,
     },
+    textboxContainer: {
+      display: 'flex',
+      justifyContent: 'center',
+      gap: 20,
+      width: 800,
+    }
   });
 
 export default CallScreen;
